@@ -37,5 +37,6 @@ public class ShoppingCart {
         cart.addItem(new CartItem("Eis", 1, 5.99));
         cart.addItem(new CartItem("Möhren", 4, 0.20));
         System.out.println(cart);
+        System.out.println("Hello"); //nur zu testzwecken
     }
 }
