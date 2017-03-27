@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jtb/jtb.iml" filepath="$PROJECT_DIR$/jtb/jtb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marius/marius.iml" filepath="$PROJECT_DIR$/marius/marius.iml" />
+      <module fileurl="file://$PROJECT_DIR$/matze/matze.iml" filepath="$PROJECT_DIR$/matze/matze.iml" />
+    </modules>
+  </component>
+</project>

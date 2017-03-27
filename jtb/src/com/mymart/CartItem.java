@@ -1,5 +1,8 @@
 package com.mymart;
 
+import java.util.Formatter;
+import java.util.Locale;
+
 public class CartItem {
 
     private String name;
@@ -24,7 +27,7 @@ public class CartItem {
     }
 
     public String toString() {
-        return String.format("%4d x %20s %5d %5d", quantity, name, pricePerUnit, pricePerUnit*quantity );
+        return String.format(Locale.GERMANY, "%3d x %30s   %10.2f  %10.2f", quantity, name, pricePerUnit, pricePerUnit*quantity );
     }
 
 
