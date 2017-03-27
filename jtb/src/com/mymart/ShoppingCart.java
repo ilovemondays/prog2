@@ -1,13 +1,38 @@
 package com.mymart;
 
-/**
- * Created by 2D6-ZNU-U1 on 27.03.17.
- */
+import java.util.ArrayList;
+
 public class ShoppingCart {
 
-    public static void main(String[] args) {
+    private static ArrayList<CartItem> items;
 
-        System.out.println("test");
+    public ShoppingCart() {
+        items = new ArrayList<>();
+    }
+
+    public static void addItem(CartItem item) {
+        items.add(item);
+    }
+
+    public static double getTotalCost() {
+        double sum = 0;
+
+        for(CartItem it : items) {
+            sum += it.getCost();
+        }
+
+        return sum;
+    }
+
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+
+        for(CartItem it : items) {
+            sb.append(it.toString()+String.format("%n"));
+        }
+
+        return sb.toString();
 
     }
 }
