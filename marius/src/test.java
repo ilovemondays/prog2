@@ -4,6 +4,5 @@
 public class test {
   public void testTest(){
   
-  }
   
 }
