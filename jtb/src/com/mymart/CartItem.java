@@ -8,11 +8,8 @@ public class CartItem {
 
     public CartItem(String name, int quantity, double pricePerUnit) {
 
-        if( quantity < 1 )
-            throw new IllegalArgumentException("Invalid quantity, below 1");
-
         this.name = name;
-        this.quantity = quantity;
+        setQuantity(quantity);
         this.pricePerUnit = pricePerUnit;
     }
 
@@ -21,6 +18,8 @@ public class CartItem {
     }
 
     public void setQuantity(int q) {
+        if(q<1)
+            throw new IllegalArgumentException("Below 1");
         quantity = q;
     }
 
