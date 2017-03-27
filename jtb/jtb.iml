@@ -9,5 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="libloc" level="project" />
+    <orderEntry type="library" name="DrawingPanel" level="project" />
   </component>
 </module>
