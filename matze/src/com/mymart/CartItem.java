@@ -38,6 +38,10 @@ public class CartItem {
         }
     }
 
+    /**
+     *
+     * @return String mit der Ordnung "Anzahl x Name    Einzelpreis  Gesamtpreis Artikel"
+     */
     public String toString() {
         //@TODO: muss noch richtig formattiert werden
         return String.format("%1d x %2$-30s   %3$.2f  %4$.2f\n", this.quantity, this.name, this.pricePerUnit, this.getCost());
