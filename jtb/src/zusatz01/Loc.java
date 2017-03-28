@@ -68,10 +68,10 @@ public class Loc {
     }
 
     public int getSector() {
-        // winkel = tangens (gegenkathete / ankathete)
         if( getX() == 0 )
             return 8;
 
+        // winkel = arcsin( gegenkathete / hypothenuse )
         double winkel = Math.asin(getY()/distance(new Loc()));
 
 
