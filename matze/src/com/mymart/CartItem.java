@@ -7,6 +7,7 @@ public class CartItem {
     private String name;
     private int quantity;
     private double pricePerUnit;
+
     /**
      * initialisiert einen einzukaufenden Artikel mit den gegebenen Daten
      * @param name Name des Artikels
@@ -18,6 +19,7 @@ public class CartItem {
         this.name = name;
         this.pricePerUnit = pricePerUnit;
     }
+
     /**
      *
      * @return Liefert den Gesamtpreis des Artikels.
@@ -26,6 +28,7 @@ public class CartItem {
     public double getCost() {
         return (double) quantity*pricePerUnit;
     }
+
     /**
      *  Setzt die Anzahl auf den gegebenen Wert.
      * @param quantity
