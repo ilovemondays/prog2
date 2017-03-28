@@ -66,7 +66,7 @@ public class Loc {
     }
 
     /**
-     * returns the manhattenDistance between this and and other given Loc object
+     * returns the manhattenDistance between this and an other given Loc object
      *
      * @param loc from type Loc
      * @return int
