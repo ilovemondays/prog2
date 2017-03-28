@@ -11,9 +11,9 @@ public class Main {
         Graphics g = dp.getGraphics();
 
         Line line = new Line(20, 3, 199, 10);
-        line.draw(g);
 
-        Line line2 = new Line(150, 40, 30, 95);
+
+        Line line2 = new Line(line, false);
         line2.draw(g);
 
     }
