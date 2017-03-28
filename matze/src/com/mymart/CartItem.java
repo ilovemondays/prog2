@@ -43,13 +43,6 @@ public class CartItem {
      * @return String mit der Ordnung "Anzahl x Name    Einzelpreis  Gesamtpreis Artikel"
      */
     public String toString() {
-        //@TODO: muss noch richtig formattiert werden
-        return String.format("%1d x %2$-30s   %3$.2f  %4$.2f\n", this.quantity, this.name, this.pricePerUnit, this.getCost());
+        return String.format("%3d x %-30s   %10.2f  %10.2f\n", this.quantity, this.name, this.pricePerUnit, this.getCost());
     }
-    //@todo: nur zum testen, müsste sonst noch entfernt werden
-    public static void main(String[] args){
-        CartItem item = new CartItem("matze", 13, 0.99);
-        System.out.println(item);
-    }
-
 }
