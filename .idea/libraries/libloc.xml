@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="libloc">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Studium/SoSe17/Programmieren_2/Anhaenge/libloc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libloc.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
