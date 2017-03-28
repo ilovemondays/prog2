@@ -15,26 +15,27 @@ public class ShoppingCart {
         this.cartItemList.add(item);
     }
 
-    //@todo: machen
     public double getTotalCost() {
         double price = 0.0;
+        for(CartItem item: cartItemList) {
+            price+=item.getCost();
+        }
         return price;
     }
 
     public String toString() {
-        String temp = "";
+        StringBuilder sb = new StringBuilder();
         for(CartItem item : cartItemList) {
-            temp += item.toString();
+            sb.append(item.toString());
         }
-        //@todo Gesamtpreis berechnen und formattiert ausgeben
-        return temp + "Gesamtpreis und so";
+        sb.append(String.format("\nSumme: %54.2f", getTotalCost())); // 54 = 60 - 6 von "Summe:"
+        return sb.toString();
     }
 
-    //@todo: nur zum testen, müsste sonst noch entfernt werden
     public static void main(String[] args) {
         ShoppingCart cart = new ShoppingCart();
-        cart.addItem(new CartItem("Schokolade", 10, 0.99));
-        cart.addItem(new CartItem("Eis", 1, 5.99));
+        cart.addItem(new CartItem("Schokolade", 100, 0.99));
+        cart.addItem(new CartItem("Eis", 10, 5.99));
         cart.addItem(new CartItem("Möhren", 4, 0.20));
         System.out.println(cart);
     }
