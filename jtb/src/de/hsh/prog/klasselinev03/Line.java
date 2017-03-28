@@ -26,6 +26,32 @@ public class Line {
     }
 
     /**
+     * Instead of 4 coordinate parameters, you can use two Loc parameters.
+     * @param l1 Loc
+     * @param l2 Loc
+     */
+    public Line(Loc l1, Loc l2) {
+        this(l1.getX(), l1.getY(), l2.getX(), l2.getY());
+    }
+
+    /**
+     * Create a new Line based on an existing Line.
+     * @param copy Line
+     * @param deep boolean True to use deep copy method.
+     */
+    public Line(Line copy, boolean deep) {
+
+        if(deep) {
+            p1 = new Loc(copy.getP1());
+            p2 = new Loc(copy.getP2());
+        } else {
+            p1 = copy.getP1();
+            p2 = copy.getP2();
+        }
+
+    }
+
+    /**
      * Get coordinates for one line ending as Loc.
      * @return Loc
      */
