@@ -1,12 +1,11 @@
 package de.hsh.prog.klasselinev03;
 import java.awt.*;
-import com.bjp.DrawingPanel;
 
 /**
- * Created by Matthias on 28.03.2017.
+ * Created by Team 13 on 28.03.2017.
  */
 public class Line {
-    Loc p1, p2;
+    private Loc p1, p2;
 
     /**
      * Legt zwei punkte p1 (x1,y1), p2 (x2,y2) an mit gegebenen koordinaten
@@ -17,8 +16,8 @@ public class Line {
      * @param y2 int
      */
     public Line(int x1, int y1, int x2, int y2) {
-        p1 = new Loc(x1, y1);
-        p2 = new Loc(x2, y2);
+        this.p1 = new Loc(x1, y1);
+        this.p2 = new Loc(x2, y2);
     }
 
     /**
@@ -28,7 +27,7 @@ public class Line {
      * @param p2
      */
     public Line(Loc p1, Loc p2) {
-        this(p1.getX(), p1.getY(), p2.getX(), p2.getX());
+        this(p1.getX(), p1.getY(), p2.getX(), p2.getY());
     }
 
     /**
@@ -81,32 +80,11 @@ public class Line {
     }
 
     /**
+     * zeichnet linien auf einer grafischen Oberfläche
      *
      * @param g
      */
     public void draw(Graphics g) {
         g.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
-    }
-
-    //@TODO: Das hier noch entfernen, dienst zum testen
-    public static void main(String[] args) {
-        Line ln = new Line(0,0,400,400);
-        Line ln2 = new Line(400,0,0,400);
-        Loc p1 = new Loc(200,0);
-        Loc p2 = new Loc(200,200);
-        Line ln3 = new Line(p1, p2);
-
-        DrawingPanel panel = new DrawingPanel(400, 400);
-        Graphics g = panel.getGraphics();
-
-        // teste flache-/tiefe-Kopie
-        Line ln4 = new Line(ln, true);
-        Line ln5 = new Line(ln2, false);
-
-        //ln.draw(g);
-        //ln2.draw(g);
-        ln3.draw(g);
-        ln4.draw(g);
-        ln5.draw(g);
     }
 }
