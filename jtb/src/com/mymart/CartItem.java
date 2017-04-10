@@ -1,6 +1,5 @@
 package com.mymart;
 
-import java.util.Locale;
 
 /**
  * An item to be added to a shoppingcart
@@ -47,7 +46,7 @@ public class CartItem {
      * @return String "Quantity x name   Price per Unit  Total costs"
      */
     public String toString() {
-        return String.format(Locale.GERMANY, "%3d x %30s   %10.2f  %10.2f", quantity, name, pricePerUnit, pricePerUnit*quantity );
+        return String.format("%3d x %-30s   %10.2f  %10.2f", quantity, name, pricePerUnit, pricePerUnit*quantity );
     }
 
 

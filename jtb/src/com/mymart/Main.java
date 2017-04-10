@@ -1,8 +1,14 @@
 package com.mymart;
 
+/**
+ * nur zu testzwecken
+ */
 public class Main {
 
 
+    /**
+     * nur zu testzwecken
+     */
     public static void main(String[] args) {
 
         ShoppingCart sc = new ShoppingCart();

@@ -1,7 +1,6 @@
 package com.mymart;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 /**
  * a Shoppingcart, contains a list of CartItems.
@@ -55,7 +54,7 @@ public class ShoppingCart {
 
         sb.append(String.format("%n"));
         // vorrausgesetzt, dass die endsumme nicht in den vierstelligen bereich geht..
-        sb.append(String.format(Locale.GERMANY, "%-55s %.2f", "Summe:", sum));
+        sb.append(String.format("Summe:%55.2f%n", sum));
 
         return sb.toString();
 
