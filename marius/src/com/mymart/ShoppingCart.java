@@ -17,6 +17,7 @@ public class ShoppingCart {
 
     /**
      * Fügt ein CartItem dem ShoppingCart hinzu.
+     *
      * @param item
      */
     public void addItem(CartItem item) {
@@ -25,25 +26,28 @@ public class ShoppingCart {
 
     /**
      * gibt die Gesamtsumme vom Shoppingchart wieder
+     *
      * @return double
      */
     public double getTotalCost() {
         double price = 0.0;
-        for(CartItem item: cartItemArray) {
-            price+=item.getCost();
+        for (CartItem item : cartItemArray) {
+            price += item.getCost();
         }
         return price;
     }
 
     /**
-     *  gibt alle Einträge im ShoppingCart aufgelistet als String mit der Gesamtsumme am Ende aus
+     * gibt alle Einträge im ShoppingCart aufgelistet als String mit der Gesamtsumme am Ende aus
+     *
      * @return string
      */
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for(CartItem item : cartItemArray) {
+        for (CartItem item : cartItemArray) {
             sb.append(item.toString());
         }
         sb.append(String.format("\nSumme: %54.2f", getTotalCost())); // 54 = 60 - 6 von "Summe:"
         return sb.toString();
     }
+}
