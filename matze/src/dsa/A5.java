@@ -37,10 +37,6 @@ public class A5 {
         return temp1 / getFak(k);
     }
 
-    public long[] listOfPrimeNumbers(long m) {
-        long length = m/2;
-        long[] list = new ArrayList<long>();
-    }
 
     public static void main(String[] args) {
         System.out.println(binomialStupid(20, 9));
