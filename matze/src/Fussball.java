@@ -3,8 +3,8 @@
  */
 public class Fussball extends Ballspiel {
     @Override
-    public String getSpieldauer() {
-        return "90 Minuten";
+    public int getSpieldauer() {
+        return 90;
     }
 
     public String einwurfRegel() {
