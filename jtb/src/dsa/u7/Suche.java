@@ -10,9 +10,13 @@ public class Suche {
 
     public static void main(String[] args) {
 
+        int[] ar = genArray(100);
+
         long t = System.currentTimeMillis();
-        sortByInsert(genArray(100));
+        int[] ar2 = sortByInsert(ar);
         System.out.println((System.currentTimeMillis()-t)+"ms");
+
+        System.out.println(getPos(ar, 42, 0, ar.length-1));
 
     }
 
@@ -25,7 +29,7 @@ public class Suche {
         return ar;
     }
 
-    public static void sortByInsert(int[] ar) {
+    public static int[] sortByInsert(int[] ar) {
 
         // printArray(ar);
 
@@ -56,6 +60,8 @@ public class Suche {
 
         }
 
+        return ar;
+
         // printArray(ar);
 
     }
@@ -66,6 +72,29 @@ public class Suche {
         }
 
         System.out.println();
+    }
+
+    public static int getPos(int[] ar, int k, int from, int to) {
+        if( ar.length==0 )
+            return -1;
+
+        if( ar[from] > k || ar[to] < k )
+            return -1;
+
+        int m = (from+to)/2;
+
+        if( ar[m] == k )
+            return m;
+
+        if( ar[m] > k )
+            return getPos(ar, k, from, m);
+
+        if( ar[m] < k )
+            return getPos(ar, k, m+1, to);
+
+
+
+        return -1;
     }
 
 }
