@@ -10,7 +10,7 @@ public class Ballspiel {
         return 1;
     }
 
-    public String getSpieldauer() {
-        return "unterschiedlich";
+    public int getSpieldauer() {
+        return -1;
     }
 }

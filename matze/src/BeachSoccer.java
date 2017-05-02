@@ -3,8 +3,8 @@
  */
 public class BeachSoccer extends Fussball {
     @Override
-    public String getSpieldauer() {
-        return "36 Minuten ";
+    public int getSpieldauer() {
+        return 36;
     }
 
     @Override

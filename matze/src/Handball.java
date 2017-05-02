@@ -3,8 +3,8 @@
  */
 public class Handball extends Ballspiel {
     @Override
-    public String getSpieldauer() {
-        return "60 Minuten";
+    public int getSpieldauer() {
+        return 60;
     }
 
     public int mannschaftsGroesse() {

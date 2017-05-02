@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Team 13 on 23.04.17.
  */
-public class Rechnung {
+class Rechnung {
     private int nummer;
     private ArrayList<Rechnungsposition> positionen = new ArrayList<Rechnungsposition>();;
 
@@ -13,7 +13,7 @@ public class Rechnung {
      * Contructor
      * @param nummer Rechnnungsnummer
      */
-    public Rechnung(int nummer) {
+    Rechnung(int nummer) {
         this.nummer = nummer;
     }
 
@@ -22,7 +22,7 @@ public class Rechnung {
      * @param artikelnummer Artikelnummer der Position
      * @param preis Preis der Position
      */
-    public void addPos(int artikelnummer, double preis) {
+    void addPos(int artikelnummer, double preis) {
         positionen.add(new Rechnungsposition(artikelnummer, preis));
     }
 
@@ -31,7 +31,7 @@ public class Rechnung {
      * @param pos index in der positionsliste
      * @return Gibt -1 zurück wenn an der Position keine Rechnungsposition existiert
      */
-    public int getArtikelnummer(int pos) {
+    int getArtikelnummer(int pos) {
         try {
             return positionen.get(pos).getArtikelnummer();
         } catch (IndexOutOfBoundsException e) {
@@ -46,7 +46,7 @@ public class Rechnung {
      * @param pos index in der positionsliste
      * @return Gibt -1 zurück wenn an der Position keine Rechnungsposition existiert
      */
-    public double getPreis(int pos) {
+    double getPreis(int pos) {
         try {
             return positionen.get(pos).getPreis();
         } catch (IndexOutOfBoundsException e) {
