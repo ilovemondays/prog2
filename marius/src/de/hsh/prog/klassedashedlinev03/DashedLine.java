@@ -15,17 +15,16 @@ public class DashedLine extends Line {
         this.dashes = dashes;
     }
 
-    public void draw(Graphics g) {
+    @Override public void draw(Graphics g) {
         int startX = getP1().getX();
         int startY = getP1().getY();
-        double currentLength = 0;
-        double  totalLength = getLength();
 
         int distX = getP2().getX()-getP1().getX();
         int distY = getP2().getY()-getP1().getY();
 
+        double  totalLength = getLength();
+        double currentLength = 0;
         int dashLengthIndex = 0;
-
         while( currentLength < totalLength) {
             dashLengthIndex++;
             if (dashLengthIndex>= dashes.length) {
@@ -42,7 +41,7 @@ public class DashedLine extends Line {
             currentLength += dashLength;
 
             if( dashLengthIndex % 2 == 0) {
-                getP1().setLocation((int)startX,(int)startY);
+                getP1().setLocation(startX, startY);
                 getP2().setLocation((int)nextX,(int)nextY);
                 super.draw(g);
             }
@@ -51,6 +50,15 @@ public class DashedLine extends Line {
             startY = (int) nextY;
 
         }
+    }
+
+    @Override public String toString() {
+        String s = "[[("+getP1().getX()+", "+getP1().getY()+"), ("+getP2().getX()+", "+getP2().getY()+")], dashes=["+dashes[0];
+
+        for(int i=1; i<dashes.length; i++)
+            s += ", "+dashes[i];
+
+        return s+"]]";
     }
 }
 
