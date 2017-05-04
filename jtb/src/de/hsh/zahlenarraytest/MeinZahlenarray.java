@@ -15,10 +15,10 @@ public class MeinZahlenarray extends Zahlenarray {
     public long getDurchschnittlicheAbfragezeit() {
 
         long[] t = new long[1];
+        Zeitmesser zm = new Zeitmesser();
 
         for(int i=0; i<t.length; i++) {
 
-            Zeitmesser zm = new Zeitmesser();
             zm.start();
             istEnthalten(2303);
             zm.end();
@@ -33,6 +33,6 @@ public class MeinZahlenarray extends Zahlenarray {
         }
 
 
-        return total/t.length;
+        return total/(long)t.length;
     }
 }
