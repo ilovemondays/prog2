@@ -3,8 +3,6 @@ package de.hsh.zahlenarraytest;
 import de.hsh.prog.zahlenarrayv02.ZahlenPruefer;
 import de.hsh.prog.zahlenarrayv02.Zahlenarray;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by jannis on 26.04.17.
  */
@@ -22,7 +20,7 @@ public class MeinZahlenarray extends Zahlenarray {
 
             Zeitmesser zm = new Zeitmesser();
             zm.start();
-            ZahlenPruefer.anzahlVerschiedene(this);
+            istEnthalten(2303);
             zm.end();
             t[i] = zm.getGemesseneZeit();
 

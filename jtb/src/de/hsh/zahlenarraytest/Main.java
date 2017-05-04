@@ -1,7 +1,6 @@
 package de.hsh.zahlenarraytest;
 
 import de.hsh.prog.zahlenarrayv02.ZahlenPruefer;
-import de.hsh.prog.zahlenarrayv02.Zahlenarray;
 
 /**
  * Created by jannis on 26.04.17.
