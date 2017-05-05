@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/output" />
     <output-test url="file://$MODULE_DIR$/testout" />
     <exclude-output />
@@ -13,5 +13,6 @@
     <orderEntry type="library" name="DrawingPanel" level="project" />
     <orderEntry type="library" name="liblocline" level="project" />
     <orderEntry type="library" name="libzarr1" level="project" />
+    <orderEntry type="library" name="libzarr" level="project" />
   </component>
 </module>
