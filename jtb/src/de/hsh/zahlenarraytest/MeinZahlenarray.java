@@ -3,8 +3,6 @@ package de.hsh.zahlenarraytest;
 import de.hsh.prog.zahlenarrayv02.ZahlenPruefer;
 import de.hsh.prog.zahlenarrayv02.Zahlenarray;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by jannis on 26.04.17.
  */
@@ -17,12 +15,12 @@ public class MeinZahlenarray extends Zahlenarray {
     public long getDurchschnittlicheAbfragezeit() {
 
         long[] t = new long[1];
+        Zeitmesser zm = new Zeitmesser();
 
         for(int i=0; i<t.length; i++) {
 
-            Zeitmesser zm = new Zeitmesser();
             zm.start();
-            ZahlenPruefer.anzahlVerschiedene(this);
+            istEnthalten(2303);
             zm.end();
             t[i] = zm.getGemesseneZeit();
 
@@ -35,6 +33,6 @@ public class MeinZahlenarray extends Zahlenarray {
         }
 
 
-        return total/t.length;
+        return total/(long)t.length;
     }
 }

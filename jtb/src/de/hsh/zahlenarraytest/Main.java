@@ -1,7 +1,6 @@
 package de.hsh.zahlenarraytest;
 
 import de.hsh.prog.zahlenarrayv02.ZahlenPruefer;
-import de.hsh.prog.zahlenarrayv02.Zahlenarray;
 
 /**
  * Created by jannis on 26.04.17.
@@ -14,7 +13,7 @@ public class Main {
         int anzahl= ZahlenPruefer.anzahlVerschiedene(array);
         System.out.println("Anzahl: "+anzahl);
 
-        System.out.println("istEnthalten verbraucht durchschnittlich "+1000*array.getDurchschnittlicheAbfragezeit()+" ns");
+        System.out.println("istEnthalten verbraucht durchschnittlich "+array.getDurchschnittlicheAbfragezeit()+" ms");
 
     }
 }

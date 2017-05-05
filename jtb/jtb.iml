@@ -12,5 +12,6 @@
     <orderEntry type="library" name="libloc" level="project" />
     <orderEntry type="library" name="DrawingPanel" level="project" />
     <orderEntry type="library" name="liblocline" level="project" />
+    <orderEntry type="library" name="libzarr1" level="project" />
   </component>
 </module>

@@ -7,6 +7,7 @@ public class Zeitmesser {
 
     private long end;
     private long start;
+    private long totalTime;
     private boolean isRunning = false;
 
     public void start() {
@@ -24,6 +25,7 @@ public class Zeitmesser {
 
         isRunning = false;
         end = System.currentTimeMillis();
+        totalTime = System.currentTimeMillis() - start;
         //System.out.println("end" + end);
     }
 
@@ -31,6 +33,6 @@ public class Zeitmesser {
         if( isRunning )
             throw new IllegalStateException();
 
-        return end - start;
+        return totalTime;
     }
 }
