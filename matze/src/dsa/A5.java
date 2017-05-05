@@ -37,7 +37,6 @@ public class A5 {
         return temp1 / getFak(k);
     }
 
-
     public static void main(String[] args) {
         System.out.println(binomialStupid(20, 9));
         System.out.println(binomialStupidRecursive(20, 9));
