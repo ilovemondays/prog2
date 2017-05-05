@@ -16,11 +16,12 @@ public class DashedLine extends Line  {
         this.dashes = dashes;
     }
 
+    @Override
     public void draw(Graphics g) {
         int x = getP1().getX();
         int y = getP1().getY();
         double currentLength = 0;
-        double totalLength = getLength();
+        double totalLength = getP1().distance(getP2());
 
         int dX = getP2().getX()-getP1().getX();
         int dY = getP2().getY()-getP1().getY();
@@ -42,9 +43,10 @@ public class DashedLine extends Line  {
 
             currentLength += dashLen;
 
+            getP1().setLocation(x, y);
+            getP2().setLocation((int) nextX, (int) nextY);
+
             if( dashIndex % 2 == 0 ) {
-                getP1().setLocation(x, y);
-                getP2().setLocation((int) nextX, (int) nextY);
                 super.draw(g);
             }
 

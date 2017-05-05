@@ -20,7 +20,8 @@ public class MeinZahlenarray extends Zahlenarray {
         for(int i=0; i<t.length; i++) {
 
             zm.start();
-            istEnthalten(2303);
+            System.out.println(istEnthalten(2139));
+            System.out.println(istEnthalten(getZahlenArray()[2]));
             zm.end();
             t[i] = zm.getGemesseneZeit();
 
