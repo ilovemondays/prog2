@@ -1,8 +1,28 @@
+import java.util.ArrayList;
+
 /**
  * Created by Team 13 on 23.04.17.
  */
 public class Main {
     public static void main(String[] args) {
+
+        ArrayList<Spieler> liste = new ArrayList<Spieler>();
+        liste.add(new Spieler("Lorem Ipsum1"));
+        liste.add(new Spieler("Lorem Ipsum2"));
+        liste.add(new Spieler("Lorem Ipsum3"));
+        liste.add(new Spieler("Lorem Ipsum4"));
+        liste.add(new Spieler("Lorem Ipsum5"));
+        liste.add(new Spieler("Lorem Ipsum6"));
+        liste.add(new Spieler("Lorem Ipsum7"));
+        liste.add(new Spieler("Lorem Ipsum8"));
+        liste.add(new Spieler("Lorem Ipsum9"));
+        liste.add(new Spieler("Lorem Ipsum10"));
+        liste.add(new Spieler("Lorem Ipsum11"));
+
+        System.out.println(liste);
+        liste.add(new Spieler("Lorem Ipsum12"));
+
+        /*
         Ballspiel s= new Ballspiel();
         System.out.println("Ballspiel: ");
         System.out.println("  Mannschaften: " + s.getMannschaften());
@@ -34,5 +54,6 @@ public class Main {
         System.out.println("  Bälle       : " + b.getBaelle());
         System.out.println("  Einwurf     : " + b.einwurfRegel());
         System.out.println("  Ecke        : " + b.eckRegel());
+        */
     }
 }
