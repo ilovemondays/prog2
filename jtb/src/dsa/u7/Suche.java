@@ -1,6 +1,5 @@
 package dsa.u7;
 
-import java.util.Arrays;
 
 /**
  * Created by 2d6-znu-u1 on 10.04.17.
@@ -31,8 +30,6 @@ public class Suche {
 
     public static int[] sortByInsert(int[] ar) {
 
-        // printArray(ar);
-
         for(int i=1; i<ar.length; i++) {
 
             if(ar[i] < ar[i-1]) {
@@ -62,16 +59,6 @@ public class Suche {
 
         return ar;
 
-        // printArray(ar);
-
-    }
-
-    public static void printArray(int[] ar) {
-        for(int i=0; i<ar.length; i++) {
-            System.out.print(ar[i]+", ");
-        }
-
-        System.out.println();
     }
 
     public static int getPos(int[] ar, int k, int from, int to) {
