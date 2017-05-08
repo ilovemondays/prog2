@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 /**
  * Created by jannis on 26.04.17.
+ * this version is not correct and doesn't work as expected. correct version is in matze
  */
 public class DashedLine extends Line  {
 
@@ -58,7 +59,7 @@ public class DashedLine extends Line  {
     }
 
     public String toString() {
-        String s = "[[("+getP1().getX()+", "+getP1().getY()+"), ("+getP2().getX()+", "+getP2().getY()+")], dashes=["+dashes[0];
+        String s = "[[("+getP1().toString()+"), ("+getP2().toString()+")], dashes=["+dashes[0];
 
         for(int i=1; i<dashes.length; i++)
             s += ", "+dashes[i];

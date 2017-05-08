@@ -1,39 +1,54 @@
 package de.hsh.zahlenarraytest;
 
-import de.hsh.prog.zahlenarrayv02.ZahlenPruefer;
 import de.hsh.prog.zahlenarrayv02.Zahlenarray;
+
+import java.util.Arrays;
 
 /**
  * Created by jannis on 26.04.17.
  */
 public class MeinZahlenarray extends Zahlenarray {
+    private Zeitmesser zm;
 
+    /**
+     * Constructo0r
+     * @param anzahl
+     * @param max
+     */
     public MeinZahlenarray(int anzahl, int max) {
         super(anzahl, max);
+        zm = new Zeitmesser();
+        zm.start();
+        Arrays.sort(getZahlenArray());
+        zm.stop();
     }
 
-    public long getDurchschnittlicheAbfragezeit() {
+    /**
+     * erhalte durchschnittliche Abfragezeit von der Methode istEnthalten
+     * @return
+     */
+    public double getDurchschnittlicheAbfragezeit() {
 
-        long[] t = new long[1];
-        Zeitmesser zm = new Zeitmesser();
 
-        for(int i=0; i<t.length; i++) {
+        int n = 20000;
 
+        for (int i = 0; i<n; i++) {
             zm.start();
-            System.out.println(istEnthalten(2139));
-            System.out.println(istEnthalten(getZahlenArray()[2]));
-            zm.end();
-            t[i] = zm.getGemesseneZeit();
-
+            istEnthalten(1203);
+            zm.stop();
         }
 
-        long total = 0;
+        return zm.getGemesseneGesamtzeit()/(double)(n+1); // +1 = array sort
+    }
 
-        for(int i=0; i<t.length; i++) {
-            total += t[i];
-        }
+    /**
+     * ist die gegebene Zahl im Array enthalten?
+     * @param zahl
+     * @return
+     */
+    @Override
+    public boolean istEnthalten(int zahl) {
+        return Arrays.binarySearch(getZahlenArray(), zahl) >= 0;
 
-
-        return total/(long)t.length;
     }
 }
