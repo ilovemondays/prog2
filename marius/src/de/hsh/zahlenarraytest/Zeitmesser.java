@@ -16,23 +16,23 @@ public class Zeitmesser {
         }
         this.startTime = System.currentTimeMillis();
         this.isRunning = true; //zeitmesser "gestartet"
-
+        //System.out.println(this.startTime);
     }
     /**
      * beendet eine Zeitmessung. Der Zeitmesser befindet sich anschließend im Zustand "gestoppt".
      */
-    public void stopp(){
+    public void stop(){
         if (!isRunning){
             throw new IllegalArgumentException();
         }
         this.endTime = System.currentTimeMillis();
         this.isRunning = false; //zeitmesser "gestoppt"
-
+        //System.out.println(this.endTime);
     }
 
     /**
      *
-     * @return Die zwischen start und stopp vergangene Zeit
+     * @return Die zwischen start und stop vergangene Zeit
      */
     public long getGemesseneGesamtzeit(){
         if(isRunning) {

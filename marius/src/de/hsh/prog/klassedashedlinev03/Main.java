@@ -1,9 +1,9 @@
 package de.hsh.prog.klassedashedlinev03;
 
 import com.bjp.DrawingPanel;
-import de.hsh.prog.klasselinev03.*;
 
-import java.awt.*;
+
+
 
 /**
  * Created by Marius Luding on 02.05.2017 for group 13
@@ -11,6 +11,7 @@ import java.awt.*;
 public class Main {
     public static void main(String[] args) {
         DrawingPanel pnl = new DrawingPanel(400, 300);
+
         int[] d= new int[] { 15, 10 };
 
 
