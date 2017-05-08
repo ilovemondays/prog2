@@ -20,7 +20,7 @@ public class MeinZahlenarray extends Zahlenarray {
         z.start();
         boolean enthalten = super.istEnthalten(zahl);
 
-        z.stopp();
+        z.stop();
         arrayZeit = z.getGemesseneGesamtzeit();
         return enthalten;
     }
