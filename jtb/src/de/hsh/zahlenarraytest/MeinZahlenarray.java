@@ -38,7 +38,7 @@ public class MeinZahlenarray extends Zahlenarray {
             zm.stop();
         }
 
-        return zm.getGemesseneGesamtzeit()/(double)(n+1); // +1 = array sort
+        return zm.getGemesseneGesamtzeit()/(double)(n+1); // +1 = array sort (ist nicht mit graja überprüft worden)
     }
 
     /**
