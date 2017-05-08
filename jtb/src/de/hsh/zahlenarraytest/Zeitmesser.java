@@ -5,39 +5,42 @@ package de.hsh.zahlenarraytest;
  * Created by jannis on 26.04.17.
  */
 public class Zeitmesser {
-
-    private long nanoStart;
-    private long nanoEnd;
-
     private long end;
     private long start;
     private boolean isRunning = false;
+    private long gesamtzeit;
 
-    void start() {
+    /**
+     * Starte timer
+     */
+    public void start() {
         if( isRunning )
             throw new IllegalStateException();
 
         isRunning = true;
-        nanoStart = System.nanoTime();
         start = System.currentTimeMillis();
-        System.out.println("start " + start + " ms");
     }
 
-    void end() {
+    /**
+     * stoppe timer
+     */
+    public void stop() {
         if( !isRunning )
             throw new IllegalStateException();
 
         isRunning = false;
-        nanoEnd = System.nanoTime();
         end = System.currentTimeMillis();
-        System.out.println("end " + end + " ms");
+        gesamtzeit += end-start;
     }
 
-    long getGemesseneZeit() {
+    /**
+     * erhalte timerzeit
+     * @return
+     */
+        public long getGemesseneGesamtzeit() {
         if( isRunning )
             throw new IllegalStateException();
 
-        System.out.println("in ms: "+ (end-start));
-        return nanoEnd-nanoStart;
+         return gesamtzeit;
     }
 }
