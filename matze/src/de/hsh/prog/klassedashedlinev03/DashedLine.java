@@ -1,5 +1,8 @@
 package de.hsh.prog.klassedashedlinev03;
 
+import de.hsh.prog.klasselinev03.Line;
+import de.hsh.prog.klasselinev03.Loc;
+
 import java.awt.*;
 
 /**
