@@ -17,6 +17,7 @@ public class Spieler {
         nummercounter++;
         if (nummercounter>11) {
             throw new IllegalStateException("Mehr als 11 Spieler sind verboten! ");
+
         } else {
             this.rueckennummer = nummercounter;
         }
@@ -29,6 +30,7 @@ public class Spieler {
     public String toString() {
         String s = this.name + " (" + this.rueckennummer + ")";
         return s;
+
     }
 
 

@@ -8,8 +8,9 @@ public class MergeSort {
 
     public static int[] Merge(int[] Array, int low, int mid, int high){
 
+    return Array;
     }
-    public static int[] mergeSort(){
-
+    public static int[] mergeSort(int[] array ){
+        return array;
     }
 }
