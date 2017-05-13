@@ -1,4 +1,4 @@
-package u17;
+
 
 import java.io.*;
 
@@ -11,33 +11,44 @@ public class DetectZip {
      * if found it checks weather the file is a valid *.zip file, or not and then outputs it findings to the console
      * @param args one command line
      */
-    public static void main (String[] args){
+    public static void main (String[] args) {
         String filename = null;
-
+        boolean checkforzip = false;
         if (args.length != 1) {
             error();
+
         } else {
-        filename = args[0];
+            checkforzip = true;
+            filename = args[0];
         }
-        if (!filename.endsWith(".zip") ) error();
 
-        try {
-            InputStream in = new FileInputStream(filename);
-            int firstblock = in.read();
-            int secondblock = in.read();
-            in.close();
+        if (checkforzip) {
+            File f = new File(filename);
 
-            if (firstblock==80||secondblock==75){
-                System.out.println("zip");
-            } else {
-                System.out.println("no zip");
+            if (!f.isFile()) {
+                checkforzip = false;
+                error();
             }
-
-
-        } catch (IOException f) {
-            error();
         }
 
+        if(checkforzip) {
+            try {
+                InputStream in = new FileInputStream(filename);
+                int firstblock = in.read();
+                int secondblock = in.read();
+                in.close();
+
+                if (firstblock == 80 || secondblock == 75) {
+                    System.out.println("zip");
+                } else {
+                    System.out.println("no zip");
+                }
+
+
+            } catch (IOException ex) {
+                error();
+            }
+        }
 
 
 

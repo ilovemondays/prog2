@@ -28,13 +28,13 @@ public class DashedLine extends Line  {
         int dY = getP2().getY()-getP1().getY();
 
         int dashIndex = dashes.length; // damit wir auch wirklich im index 0 anfangen
-
+        int dashLen = 0;
         while( currentLength < totalLength ) {
 
             dashIndex++;
             if( dashIndex >= dashes.length )
                 dashIndex = 0;
-            int dashLen = dashes[dashIndex];
+            dashLen = dashes[dashIndex];
 
             if( dashLen + currentLength > totalLength )
                 dashLen = (int) ( totalLength - currentLength );
