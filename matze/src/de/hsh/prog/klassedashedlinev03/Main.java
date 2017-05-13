@@ -1,6 +1,7 @@
 package de.hsh.prog.klassedashedlinev03;
 
 import com.bjp.DrawingPanel;
+import de.hsh.prog.klasselinev03.Loc;
 
 /**
  * Created by 5m3-9c9-u1 on 05.05.17.
