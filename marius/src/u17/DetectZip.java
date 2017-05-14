@@ -8,30 +8,35 @@ import java.io.*;
 public class DetectZip {
     /**
      * Uses a given, valid filename and looks for a file of that name in the working directory
-     * if found it checks weather the file is a valid *.zip file, or not and then outputs it findings to the console
+     * if found it checks weather the file is a valid *.zip file and then outputs it findings to the console
      * @param args one command line
      */
     public static void main (String[] args) {
         String filename = null;
-        boolean checkforzip = false;
+        boolean checkForCorrectInput = false;
         if (args.length != 1) {
             error();
 
         } else {
-            checkforzip = true;
+            checkForCorrectInput = true;
             filename = args[0];
         }
 
-        if (checkforzip) {
+        if (checkForCorrectInput) {
             File f = new File(filename);
 
             if (!f.isFile()) {
-                checkforzip = false;
+                checkForCorrectInput = false;
                 error();
             }
         }
 
-        if(checkforzip) {
+        checkForZip(filename, checkForCorrectInput);
+
+    }
+
+    private static void checkForZip(String filename, boolean checkForCorrectInput) {
+        if(checkForCorrectInput) {
             try {
                 InputStream in = new FileInputStream(filename);
                 int firstblock = in.read();
@@ -49,13 +54,6 @@ public class DetectZip {
                 error();
             }
         }
-
-
-
-
-
-
-
     }
 
     /**
