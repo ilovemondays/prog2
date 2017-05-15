@@ -6,7 +6,7 @@ package dsa.u11;
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
-        list.insert(1, null);
+        list.insert(1, list.getHead());
         list.insert(2,1);
         list.insert(3, list.findByValue(2));
 

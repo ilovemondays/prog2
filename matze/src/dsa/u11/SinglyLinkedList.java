@@ -9,8 +9,9 @@ public class SinglyLinkedList {
 
     public SinglyLinkedList() {
         head = new Node();
-        tail = new Node(head, null);
+        tail = new Node(head, -1);
         head.setNext(tail);
+        head.setValue(-1);
     }
 
     public Node getHead() {
@@ -35,7 +36,9 @@ public class SinglyLinkedList {
      * @return
      */
     public Node findByValue(Object value) {
-        Node act = head;
+        System.out.println(head.getNext().getValue());
+        Node act = head.getNext();
+        System.out.println("act: "+act);
         while (act != tail) {
             if(act.getValue() == value) {
                 break;
@@ -54,16 +57,23 @@ public class SinglyLinkedList {
      * @param p
      */
     public void insert(Object x, Object p) {
+        System.out.println("aufruf mit:"+p+ " // "+ p.getClass());
         Node position = findByValue(p);
         if(position == null) return;
         insert(x, position);
     }
     public void insert(Object x, Node position) {
+        System.out.println("wird eingefügt: "+x);
         Node newNode = new Node(position.getNext(), x);
         position.setNext(newNode);
 
         if(newNode.getNext() == tail) {
             tail.setNext(newNode);
+        }
+
+        // beim ersten einfügen
+        if(tail.getNext() == head) {
+            head.setNext(newNode);
         }
     }
 
