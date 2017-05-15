@@ -11,5 +11,9 @@ public class Main {
         list.insert(3, list.findByValue(2));
 
         list.iterate();
+
+        list.delete(2);
+
+        list.iterate();
     }
 }

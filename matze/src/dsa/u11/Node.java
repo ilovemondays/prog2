@@ -8,10 +8,11 @@ public class Node {
     private Object value;
 
     public Node() {
-        value = -1;
+        value = null;
     }
     public Node(Node next, Object value) {
-
+        this.next = next;
+        this.value = value;
     }
 
     public Node getNext() {
