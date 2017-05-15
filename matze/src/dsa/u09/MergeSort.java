@@ -11,7 +11,7 @@ public class MergeSort {
 
     public static void main(String[] args) {
         long start;
-        int[] a = randomArray(10000);
+        int[] a = randomArray(500000);
 
         int[] a3 = a;
         start = System.currentTimeMillis();
