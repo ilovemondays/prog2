@@ -62,7 +62,7 @@ public class Bruch {
 
         if(b2 instanceof Bruch ) {
             Bruch check = (Bruch) b2;
-            return check.value() == value();
+            return check.zahl() == zahl();
         }
 
          return false;
@@ -82,8 +82,8 @@ public class Bruch {
      * berechne den bruch
      * @return
      */
-    public double value() {
-        return getZaehler()/getNenner();
+    public double zahl() {
+        return 1.0*getZaehler()/getNenner();
     }
 
     /**
