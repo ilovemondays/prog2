@@ -10,6 +10,8 @@
       <excludeFolder url="file://$MODULE_DIR$/src/DSA/binom" />
       <excludeFolder url="file://$MODULE_DIR$/src/DSA/u7" />
       <excludeFolder url="file://$MODULE_DIR$/src/de/hsh/zahlenarraytest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/u18" />
+      <excludeFolder url="file://$MODULE_DIR$/src/u19" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
