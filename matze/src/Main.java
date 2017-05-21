@@ -1,11 +1,15 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
  * Created by Team 13 on 23.04.17.
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        Decode.decode("matze/src/friends.dat");
+
+        /*
         ArrayList<Spieler> liste = new ArrayList<Spieler>();
         liste.add(new Spieler("Lorem Ipsum1"));
         liste.add(new Spieler("Lorem Ipsum2"));
@@ -21,6 +25,7 @@ public class Main {
 
         System.out.println(liste);
         liste.add(new Spieler("Lorem Ipsum12"));
+        */
 
         /*
         Ballspiel s= new Ballspiel();
