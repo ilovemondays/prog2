@@ -7,7 +7,19 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        Decode.decode("matze/src/friends.dat");
+        Bruch b1 = new Bruch(1, 5);
+        Bruch b2 = new Bruch(2, 10);
+        Bruch b3 = new Bruch(5, 10);
+        System.out.println(b1.zahl());
+        System.out.println(b2.zahl());
+        System.out.println(b3.zahl());
+        System.out.println(b1.equals(b2));
+        System.out.println(b3.equals(b2));
+        System.out.println(b3.hashCode());
+        System.out.println(b2.hashCode());
+        System.out.println(b1.hashCode());
+
+        //Decode.decode("matze/src/friends.dat");
 
         /*
         ArrayList<Spieler> liste = new ArrayList<Spieler>();
