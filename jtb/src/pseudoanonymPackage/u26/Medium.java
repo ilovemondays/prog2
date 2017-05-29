@@ -1,4 +1,4 @@
-package pseudoanonymPackage.u25;
+package pseudoanonymPackage.u26;
 
 /**
  * Created by jannis on 24.05.17.
@@ -55,7 +55,7 @@ public abstract class Medium implements Comparable<Medium> {
     public abstract int getLeihFrist();
 
     /**
-     * compare to Medium objects
+     * compare to pseudoanonymPackage.u26.Medium objects
      */
     @Override
     public int compareTo(Medium to) {

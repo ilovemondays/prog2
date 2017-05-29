@@ -19,24 +19,36 @@ package u19;
                  C c= new C();
 
                  a.a();
-                 b.a();
-                 c.a();
+                 b.a();    //impliziter Upcast
+                 c.a();    //impliziter Upcast
 
                  a.b();    //compilerfehler, da methode "b" nicht in A oder parent von A enthalten ist
                  b.b();
-                 c.b();
+                 c.b();    //impliziter Upcast
                  a.c();    //compilerfehler, da methode "c" nicht in A oder parent von A enthalten ist
-                 b.c();     //compilerfehler, da methode "c" nicht in B oder parent von B enthalten ist
+                 b.c();    //compilerfehler, da methode "c" nicht in B oder parent von B enthalten ist
                  c.c();
 
-                 A x= new B();
+                 A x= new B(); // impliziter Upcast
                  x.a();
-                 x.b();
-                 x.c();
+                 x.b(); //compilerfehler, weil x nur die Methoden aus der statischen Klasse A kennt
+                 x.c(); //compilerfehler, weil x nur die Methoden aus der statischen Klasse A kennt
 
-                 ((A)x).a();
-                 ((B)x).b();
-                 ((C)x).c();
+                 ((A)x).a(); // == x.a(); weder Downcast noch Upcast
+                 ((B)x).b(); // expliziter Downcast und ausführbar, weil der dynamische Typ von x B ist
+                 ((C)x).c(); // zu weit gedowncastet, nur nach B downcastbar, daher Laufzeitfehler
         }
+
+        /*
+
+            Identifizieren Sie die Programmzeilen, die zu einem Compilerfehler führen.
+            Erläutern Sie jeweils mit einem Satz, was die Ursache des Compilerfehlers ist.
+            Identifizieren Sie die Programmzeilen, die zu einem Laufzeitfehler führen.
+            Erläutern Sie jeweils mit einem Satz, was die Ursache des Laufzeitfehlers ist.
+            Identifizieren Sie die Programmzeilen (wenn vorhanden), die einen expliziten Downcast enthalten.
+            Identifizieren Sie die Programmzeilen (wenn vorhanden), die einen expliziten Upcast enthalten.
+            Identifizieren Sie die Programmzeilen (wenn vorhanden), die einen impliziten Upcast enthalten.
+
+         */
     }
 

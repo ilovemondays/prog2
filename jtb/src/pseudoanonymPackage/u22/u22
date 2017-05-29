@@ -1,0 +1,16 @@
+Teilaufgabe a)
+
+B extends A
+Durch die Vererbung von BSource überschreiben sich die beiden get() Methoden, da der Name
+und die Parameter übereinstimmen. Allerdings ist der Return-Typ unterschiedlich. Das Substitutionsprinzip
+wird durch die Vererbung von B (B-->A) erfüllt.
+
+Explizit für das UML-Diagramm. Der Pfeil müsste von der Klasse B nach Klasse A zeigen (siehe Astah-Diagramm).
+
+Teilaufgabe b)
+
+Keinerlei Verbindung zwischen S und R benötigt.
+STarget erbt aus RTarget, dadurch ist die Methode put(R r) vorhanden, wird z.B.:
+    STarget st = new STarget();
+    st.put(new R());
+aufgerufen. Dies ist möglich, da beide Methoden unterschiedliche Eingabeparameter besitzen (anders als bei Teilaufgabe a).

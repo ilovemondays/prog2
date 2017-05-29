@@ -7,12 +7,7 @@ public class TuerglockeMain {
     public static void main(String[] args) {
         Klingelknopf knopf= new Klingelknopf();
 
-
-
-
-
-
-
+        // die geforderte umsetzung mit einer anonymen klasse
         knopf.setBeobachter(new Beobachter() {
             @Override
             public void update(BeobachtetesObjekt o) {
@@ -27,7 +22,7 @@ public class TuerglockeMain {
 
         //oder mit 'lambda' Verkürzung "If the anonymous class has more methods the substitution is not possible."
 
-        knopf.setBeobachter((BeobachtetesObjekt o) -> {
+        knopf.setBeobachter(o -> {
                 if( o.getZustand().equals("gedrueckt") )
                     System.out.println("Klingeling");
                 else if( o.getZustand().equals("losgelassen") )
