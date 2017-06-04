@@ -15,5 +15,6 @@
     <orderEntry type="library" name="liblocline" level="project" />
     <orderEntry type="library" name="libzarr1" level="project" />
     <orderEntry type="library" name="libzarr" level="project" />
+    <orderEntry type="library" name="libchoreo" level="project" />
   </component>
 </module>
