@@ -32,6 +32,7 @@ public interface FactorsEngine {
     boolean abortJob(long number);
 
     /**
+    /**
      * aborts all running jobs. Compute jobs
      * that completed successfully will remain in the list, so the
      * corresponding results are available even after shutdown. This method
