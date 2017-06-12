@@ -14,5 +14,14 @@
     <orderEntry type="library" name="DrawingPanel" level="project" />
     <orderEntry type="library" name="liblocline" level="project" />
     <orderEntry type="library" name="liblocline-u12" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../libchoreo.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
