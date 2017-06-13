@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+/**
+ * yadayada
+ */
 interface Primitive {
     /**
      * Zeichnet das Objekt und verändert dabei ggf. die aktuelle Zeichenposition
