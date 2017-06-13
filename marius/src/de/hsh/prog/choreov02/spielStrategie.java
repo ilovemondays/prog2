@@ -76,13 +76,13 @@ public class spielStrategie implements Runnable {
     private void goToSector(int start) {
         Point player = board.getCurrentPosition(this.player);
         int y = (int) player.getY();
-        System.out.println(start + " col");
-        System.out.println(y + " pos");
+        //System.out.println(start + " col");
+        //System.out.println(y + " pos");
         int Distanz;
         Distanz = (y - start)/10;
 
 
-        System.out.println(Distanz);
+        //System.out.println(Distanz);
         move(Direction.NORTH,Distanz);
 
 
@@ -105,7 +105,6 @@ public class spielStrategie implements Runnable {
         maxDirection(Direction.LESS_RED);
         maxDirection(Direction.LESS_BLUE);
         maxDirection(Direction.LESS_GREEN);
-        //maxDirection(Direction.NORTH);
         goToSector(0);
         scrambleInArea();
     }
@@ -122,7 +121,6 @@ public class spielStrategie implements Runnable {
         move(Direction.LESS_GREEN);
         maxDirection(Direction.LESS_BLUE);
         maxDirection(Direction.MORE_RED);
-        //maxDirection(Direction.SOUTH);
         goToSector(StartGoldArea);
         scrambleInArea();
 
