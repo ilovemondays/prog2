@@ -13,7 +13,7 @@ public class LoadDriver{
 
         try {
             return DriverManager.getConnection(
-                    "jdbc:oracle:thin:@dboracleserv.inform.hs-hannover.de:1521:db01",
+                    "",
                     "", ""
             );
         } catch (SQLException e) {
