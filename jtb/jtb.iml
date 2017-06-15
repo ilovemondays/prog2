@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/src/de/hsh/prog/choreov02" />
       <excludeFolder url="file://$MODULE_DIR$/src/de/hsh/zahlenarraytest" />
+      <excludeFolder url="file://$MODULE_DIR$/src/gui" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
