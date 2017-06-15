@@ -21,6 +21,7 @@ public class LoadDriver{
             String user = s.nextLine();
             String pw = s.nextLine();
             s.close();
+            // asdasd push den krams
 
 
             return DriverManager.getConnection(db, user, pw);
