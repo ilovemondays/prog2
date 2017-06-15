@@ -17,7 +17,7 @@ public class Decode {
     }
 
     public static void decode(String file){
-         ;
+
         try {
             FileInputStream fis = new FileInputStream(file );
             ObjectInputStream ois = new ObjectInputStream(fis);
