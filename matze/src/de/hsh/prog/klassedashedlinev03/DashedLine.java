@@ -11,14 +11,26 @@ import java.awt.*;
 public class DashedLine extends Line {
     private int[] dashes;
 
+    /**
+     * Constructor
+     * @param p1
+     * @param p2
+     * @param dashes
+     */
+
     public DashedLine(Loc p1, Loc p2, int[] dashes) {
         super(p1, p2);
         this.dashes = dashes;
     }
 
+    /**
+     * Draws a dashed line onto the given graphicspanel
+     * @param g
+     */
+    @Override
     public void draw(Graphics g) {
-        int x;
-        int y;
+        double x;
+        double y;
         int counter = 0;
         double currentLen = 0;
         double totalLen = getP1().distance(getP2());
@@ -46,14 +58,27 @@ public class DashedLine extends Line {
 
             // start with first array element == 0
             if(counter % 2 == 0) {
-                getP1().setLocation(x, y);
+                getP1().setLocation((int)x, (int) y);
                 getP2().setLocation((int)nextx, (int)nexty);
                 super.draw(g);
             }
 
-            x = (int)nextx;
-            y = (int)nexty;
+            x = nextx;
+            y = nexty;
             counter++;
         }
+    }
+
+    /**
+     * Standard toString utility method
+     * @return
+     */
+    @Override public String toString() {
+        String s = "["+super.toString()+", dashes=["+dashes[0];
+
+        for(int i=1; i<dashes.length; i++)
+            s += ", "+dashes[i];
+
+        return s+"]]";
     }
 }
